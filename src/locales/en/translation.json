@@ -1,0 +1,56 @@
+
+{
+  "home": "Home",
+  "properties": "Properties",
+  "favorites": "Favorites",
+  "language": "English",
+  "hero": {
+    "badge": "Discover properties across Egypt",
+    "title": "Find a place",
+    "highlight": "you'll love to call home.",
+    "description": "Explore apartments, villas, and more. Find the right property for your lifestyle and budget.",
+    "buy": "Buy",
+    "rent": "Rent",
+    "location": "Location",
+    "locationPlaceholder": "City, area, or compound",
+    "propertyType": "Property Type",
+    "allTypes": "All types",
+    "apartment": "Apartment",
+    "villa": "Villa",
+    "studio": "Studio",
+    "chalet": "Chalet",
+    "search": "Search",
+    "trust1": "✓ Properties across Egypt",
+    "trust2": "✓ Buy or rent",
+    "trust3": "✓ Find your ideal home"
+  },
+  "featured": {
+    "eyebrow": "Handpicked for you",
+    "title": "Featured Properties",
+    "description": "Explore a selection of properties worth discovering across Egypt.",
+    "viewAll": "View All Properties"
+  },
+  "property": {
+    "buy": "For Sale",
+    "rent": "For Rent",
+    "demo": "Demo Listing",
+    "beds": "Beds",
+    "baths": "Baths",
+    "areaUnit": "m²",
+    "currency": "EGP",
+    "month": "month",
+    "viewDetails": "View property details",
+    "titles": {
+      "egy-001": "Modern Family Apartment",
+      "egy-002": "Elegant Luxury Villa",
+      "egy-003": "Cozy Modern Apartment",
+      "egy-004": "Seaside Summer Chalet"
+    },
+    "locations": {
+      "egy-001": "New Cairo, Fifth Settlement",
+      "egy-002": "Sheikh Zayed, Giza",
+      "egy-003": "Maadi, Cairo",
+      "egy-004": "North Coast, Egypt"
+    }
+  }
+}
