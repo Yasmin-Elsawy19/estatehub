@@ -11,19 +11,25 @@ import {
   Globe,
 } from "lucide-react";
 
+import { useFavorites } from "../../hooks/useFavorites";
+
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { t, i18n } = useTranslation();
+  const { favorites } = useFavorites();
 
   const isArabic = i18n.language.startsWith("ar");
 
-   useEffect(() => {
+  useEffect(() => {
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
     document.documentElement.lang = isArabic ? "ar" : "en";
 
-    localStorage.setItem("estatehub-language", isArabic ? "ar" : "en");
+    localStorage.setItem(
+      "estatehub-language",
+      isArabic ? "ar" : "en"
+    );
   }, [isArabic]);
 
   // Apply dark mode
@@ -40,7 +46,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t("home"), path: "/" },
     { name: t("properties"), path: "/properties" },
-    { name: t("favorites"), path: "/favorites" },
+    { name: t("favorites.nav"), path: "/favorites" },
   ];
 
   const linkStyles = ({ isActive }) =>
@@ -50,6 +56,17 @@ export default function Navbar() {
         ? "text-blue-700 dark:text-blue-400"
         : "text-slate-600 hover:text-blue-700 dark:text-slate-300 dark:hover:text-blue-400"
     }`;
+
+  // Favorite count badge
+  const FavoriteCount = () => {
+    if (favorites.length === 0) return null;
+
+    return (
+      <span className="flex size-5 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white">
+        {favorites.length}
+      </span>
+    );
+  };
 
   return (
     <motion.header
@@ -78,8 +95,10 @@ export default function Navbar() {
               className={linkStyles}
             >
               {({ isActive }) => (
-                <span className="relative py-2">
+                <span className="relative flex items-center gap-2 py-2">
                   {link.name}
+
+                  {link.path === "/favorites" && <FavoriteCount />}
 
                   {isActive && (
                     <motion.span
@@ -95,7 +114,6 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-4 md:flex">
-
           <button
             type="button"
             onClick={toggleLanguage}
@@ -118,7 +136,6 @@ export default function Navbar() {
 
         {/* Mobile Actions */}
         <div className="flex items-center gap-3 md:hidden">
-
           <button
             type="button"
             onClick={() => setIsDark((prev) => !prev)}
@@ -150,7 +167,6 @@ export default function Navbar() {
             className="overflow-hidden border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950 md:hidden"
           >
             <div className="flex flex-col gap-1 px-5 py-4">
-
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -165,7 +181,11 @@ export default function Navbar() {
                     }`
                   }
                 >
-                  {link.name}
+                  <span className="flex items-center justify-between">
+                    {link.name}
+
+                    {link.path === "/favorites" && <FavoriteCount />}
+                  </span>
                 </NavLink>
               ))}
 

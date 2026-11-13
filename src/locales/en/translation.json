@@ -2,8 +2,18 @@
 {
   "home": "Home",
   "properties": "Properties",
-  "favorites": "Favorites",
+  "favorites": {
+  "nav": "Favorites",
+  "add": "Add to favorites",
+  "remove": "Remove from favorites",
+  "title": "My Favorite Properties",
+  "description": "All the properties you've saved in one place.",
+  "emptyTitle": "No Favorites Yet",
+  "emptyDescription": "You haven't saved any properties yet. Explore properties and add the ones you like.",
+  "browse": "Explore Properties"
+},
   "language": "English",
+
   "hero": {
     "badge": "Discover properties across Egypt",
     "title": "Find a place",
@@ -24,12 +34,14 @@
     "trust2": "✓ Buy or rent",
     "trust3": "✓ Find your ideal home"
   },
+
   "featured": {
     "eyebrow": "Handpicked for you",
     "title": "Featured Properties",
     "description": "Explore a selection of properties worth discovering across Egypt.",
     "viewAll": "View All Properties"
   },
+
   "property": {
     "buy": "For Sale",
     "rent": "For Rent",
@@ -40,17 +52,55 @@
     "currency": "EGP",
     "month": "month",
     "viewDetails": "View property details",
+
     "titles": {
       "egy-001": "Modern Family Apartment",
       "egy-002": "Elegant Luxury Villa",
       "egy-003": "Cozy Modern Apartment",
       "egy-004": "Seaside Summer Chalet"
     },
+
     "locations": {
       "egy-001": "New Cairo, Fifth Settlement",
       "egy-002": "Sheikh Zayed, Giza",
       "egy-003": "Maadi, Cairo",
       "egy-004": "North Coast, Egypt"
     }
-  }
+  },
+
+  "propertiesPage": {
+    "eyebrow": "Explore Egypt",
+    "title": "Find Your Perfect Property",
+    "description": "Explore available properties and find the right place for your lifestyle and budget.",
+    "filters": "Search Filters",
+    "purpose": "Purpose",
+    "all": "All",
+    "sort": "Sort By",
+    "default": "Default",
+    "lowHigh": "Price: Low to High",
+    "highLow": "Price: High to Low",
+    "minPrice": "Minimum Price (EGP)",
+    "maxPrice": "Maximum Price (EGP)",
+    "search": "Apply Filters",
+    "clear": "Clear Filters",
+    "results": "Available Properties",
+    "found": "properties found",
+    "emptyTitle": "No Properties Found",
+    "emptyDescription": "Try changing your filters to find more properties."
+  },
+  "propertyDetails": {
+  "backToProperties": "Back to Properties",
+  "notFound": "Property Not Found",
+  "overview": "Property Overview",
+  "description": "{{title}} is a {{type}} located in {{location}}. Explore its available details, space, and features.",
+  "details": "Property Details",
+  "propertyType": "Property Type",
+  "purpose": "Purpose",
+  "bedrooms": "Bedrooms",
+  "bathrooms": "Bathrooms",
+  "area": "Area",
+  "price": "Property Price",
+  "location": "Location",
+  "demoNotice": "This is a demo listing with sample property data. It is not a real property offer."
+}
 }

@@ -8,12 +8,17 @@ import {
   Bath,
   Ruler,
   ArrowUpRight,
+  Heart,
 } from "lucide-react";
+
+import { useFavorites } from "../../hooks/useFavorites";
 
 export default function PropertyCard({ property }) {
   const { t, i18n } = useTranslation();
+  const { toggleFavorite, isFavorite } = useFavorites();
 
   const isArabic = i18n.language.startsWith("ar");
+  const favorite = isFavorite(property.id);
 
   const formattedPrice = new Intl.NumberFormat(
     isArabic ? "ar-EG" : "en-EG"
@@ -40,6 +45,25 @@ export default function PropertyCard({ property }) {
         <span className="absolute end-4 top-4 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-semibold text-slate-800 backdrop-blur">
           {t("property.demo")}
         </span>
+
+        <button
+          type="button"
+          onClick={() => toggleFavorite(property.id)}
+          aria-label={
+            favorite ? t("favorites.remove") : t("favorites.add")
+          }
+          aria-pressed={favorite}
+          className="absolute bottom-4 end-4 flex size-10 items-center justify-center rounded-full bg-white shadow-md transition hover:scale-110"
+        >
+          <Heart
+            size={20}
+            className={
+              favorite
+                ? "fill-red-500 text-red-500"
+                : "text-slate-600"
+            }
+          />
+        </button>
       </div>
 
       <div className="p-5">
