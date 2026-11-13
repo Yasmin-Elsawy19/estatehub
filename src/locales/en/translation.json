@@ -53,19 +53,45 @@
     "month": "month",
     "viewDetails": "View property details",
 
-    "titles": {
-      "egy-001": "Modern Family Apartment",
-      "egy-002": "Elegant Luxury Villa",
-      "egy-003": "Cozy Modern Apartment",
-      "egy-004": "Seaside Summer Chalet"
-    },
+     
+"titles": {
+  "egy-001": "Modern Family Apartment",
+  "egy-002": "Elegant Luxury Villa",
+  "egy-003": "Cozy Modern Apartment",
+  "egy-004": "Seaside Summer Chalet",
+  "egy-005": "Bright Contemporary Apartment",
+  "egy-006": "Premium Garden Villa",
+  "egy-007": "Minimalist Family Home",
+  "egy-008": "Luxury Furnished Villa",
+  "egy-009": "Affordable Modern Studio",
+  "egy-010": "Spacious Family Apartment",
+  "egy-011": "Classic Maadi Residence",
+  "egy-012": "Capital Smart Apartment",
+  "egy-013": "Modern Capital Studio",
+  "egy-014": "Alexandria Sea View Apartment",
+  "egy-015": "Luxury North Coast Chalet",
+  "egy-016": "Relaxing Beachfront Chalet"
+},
 
-    "locations": {
-      "egy-001": "New Cairo, Fifth Settlement",
-      "egy-002": "Sheikh Zayed, Giza",
-      "egy-003": "Maadi, Cairo",
-      "egy-004": "North Coast, Egypt"
-    }
+"locations": {
+  "egy-001": "New Cairo, Fifth Settlement",
+  "egy-002": "Sheikh Zayed, Giza",
+  "egy-003": "Maadi, Cairo",
+  "egy-004": "North Coast, Egypt",
+  "egy-005": "New Cairo, Fifth Settlement",
+  "egy-006": "New Cairo, Fifth Settlement",
+  "egy-007": "Sheikh Zayed, Giza",
+  "egy-008": "Sheikh Zayed, Giza",
+  "egy-009": "6 October, Giza",
+  "egy-010": "6 October, Giza",
+  "egy-011": "Maadi, Cairo",
+  "egy-012": "New Administrative Capital, Egypt",
+  "egy-013": "New Administrative Capital, Egypt",
+  "egy-014": "Stanley, Alexandria",
+  "egy-015": "North Coast, Egypt",
+  "egy-016": "Ain Sokhna, Egypt"
+}
+
   },
 
   "propertiesPage": {
@@ -102,5 +128,11 @@
   "price": "Property Price",
   "location": "Location",
   "demoNotice": "This is a demo listing with sample property data. It is not a real property offer."
+},
+"dashboard": "Dashboard",
+"footer": {
+  "description": "Discover your next place to call home.",
+  "rights": "All rights reserved.",
+  "credit": "Crafted with care by Eng. Yasmin Elsawy"
 }
 }

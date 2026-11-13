@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import properties from "../data/properties";
+import PropertyGallery from "../components/properties/PropertyGallery";
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -51,10 +52,12 @@ export default function PropertyDetails() {
 
   const propertyType = t(`hero.${property.type}`);
 
+  const propertyImages =
+    property.images?.length > 0 ? property.images : [property.image];
+
   return (
     <section className="min-h-screen bg-slate-50 px-4 py-10 dark:bg-slate-950 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-7xl">
-
         {/* Back Link */}
         <Link
           to="/properties"
@@ -64,15 +67,15 @@ export default function PropertyDetails() {
           {t("propertyDetails.backToProperties")}
         </Link>
 
-        {/* Property Image */}
-        <div className="relative overflow-hidden rounded-3xl">
-          <img
-            src={property.image}
-            alt={title}
-            className="h-[300px] w-full object-cover sm:h-[450px]"
+        {/* Property Gallery + Badges */}
+        <div className="relative">
+          <PropertyGallery
+            key={property.id}
+            images={propertyImages}
+            title={title}
           />
 
-          <div className="absolute left-5 top-5 flex gap-2">
+          <div className="absolute left-5 top-5 z-10 flex gap-2">
             <span className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white">
               {t(`property.${property.purpose}`)}
             </span>
@@ -85,7 +88,6 @@ export default function PropertyDetails() {
 
         {/* Main Content */}
         <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_340px]">
-
           {/* Property Information */}
           <div>
             <div className="mb-6">
@@ -248,7 +250,6 @@ export default function PropertyDetails() {
               </div>
             </div>
           </aside>
-
         </div>
       </div>
     </section>

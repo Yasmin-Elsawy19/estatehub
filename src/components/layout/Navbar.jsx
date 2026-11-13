@@ -47,6 +47,8 @@ export default function Navbar() {
     { name: t("home"), path: "/" },
     { name: t("properties"), path: "/properties" },
     { name: t("favorites.nav"), path: "/favorites" },
+    { name: t("dashboard"), path: "/dashboard" },
+
   ];
 
   const linkStyles = ({ isActive }) =>
